@@ -6,8 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/geonames-all-cities-with-a-population-1000.json": {
-        target:
-          "http://127.0.0.1:8080/geonames-all-cities-with-a-population-1000.json", // Your API server address
+        target: "http://127.0.0.1:8080", // Your API server address
         changeOrigin: true,
       },
     },
