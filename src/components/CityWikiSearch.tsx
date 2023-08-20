@@ -10,8 +10,11 @@ const CityWikiSearch: React.FC = () => {
         throw new Error("Response not ok");
       }
 
-      const data = await response.json();
-      console.log(data);
+      const cities = await response.json();
+      console.log(cities);
+      const randomIndex = Math.floor(Math.random() * cities.length);
+      const randomItem = cities[randomIndex];
+      console.log("Random City:", randomItem);
     } catch (error) {
       console.error("Error fatching data:", error);
     }
